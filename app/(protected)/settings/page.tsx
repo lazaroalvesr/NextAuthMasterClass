@@ -47,9 +47,9 @@ const SettingsPage = () => {
                         setError(data.error)
                     }
 
-                    if (data.sucess) {
+                    if (data.success) {
                         update()
-                        setSucess(data.sucess)
+                        setSucess(data.success)
                     }
                 })
                 .catch(() => setError("Something went wrong!"))

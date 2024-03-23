@@ -29,12 +29,15 @@ export const {
   callbacks: {
     async signIn({ user, account }) {
 
-      if (account?.provider !== "credentials") return true;
+      if (!user || !user.id || account?.provider !== "credentials") {
+        return false;
+      }
 
-      const existingUser = await getUserById(user.id)
+      const existingUser = await getUserById(user.id);
 
-
-      if (!existingUser?.emailVerified) return false
+      if (!existingUser?.emailVerified) {
+        return false;
+      }
 
       if (existingUser.isTwoFactorEnabled) {
         const twoFactorConfirmation = await getTwoFactorConfirmationByUserId(existingUser.id)

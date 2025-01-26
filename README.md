@@ -72,8 +72,6 @@
 3. Após a autenticação, você será redirecionado para a página principal da aplicação ou uma página protegida.
 4. Utilize o envio de email e as notificações como parte do fluxo de interação com o usuário.
 
-Este projeto está licenciado sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
 ## *✍️ *Autor**
 - [@lazaroalvesr](https://github.com/lazaroalvesr)
 

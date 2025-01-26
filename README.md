@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# NextAuthMasterClass
 
-## Getting Started
+**NextAuthMasterClass** é uma aplicação full-stack construída com **Next.js**, **NextAuth.js**, e diversas outras tecnologias modernas. O projeto demonstra como configurar autenticação de usuários, validação de dados, envio de emails e outros recursos com integração de UI moderna usando **shadcn/ui**.
 
-First, run the development server:
+## Tecnologias Utilizadas
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Next.js**: Framework React para construção de aplicações full-stack.
+- **NextAuth.js**: Biblioteca de autenticação para Next.js, facilitando a integração com provedores de autenticação como Google, GitHub, etc.
+- **Prisma**: ORM para Node.js e TypeScript, utilizado para gerenciar o banco de dados e realizar operações de leitura e escrita.
+- **Zod**: Biblioteca de validação de dados para garantir a integridade e segurança das informações no projeto.
+- **shadcn/ui**: Biblioteca de componentes UI para React, que oferece uma forma rápida de criar interfaces bonitas e funcionais.
+- **Resend**: Serviço de envio de emails, utilizado para gerenciar o envio de emails de forma fácil e eficiente.
+- **Sonner**: Biblioteca de notificações para exibir mensagens de sucesso e erro para o usuário.
+- **TailwindCSS**: Framework de CSS para estilização rápida e responsiva.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Funcionalidades
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Autenticação com Provedores Externos**: Integração com provedores de autenticação como **Google** e **GitHub** utilizando **NextAuth.js**.
+- **Validação de Dados**: **Zod** é usado para validar dados do formulário, garantindo segurança e qualidade.
+- **Envio de Emails**: **Resend** é utilizado para enviar emails de maneira fácil e rápida para os usuários.
+- **Notificações**: **Sonner** é utilizado para mostrar notificações interativas de sucesso ou erro para o usuário.
+- **Banco de Dados**: **Prisma** gerencia o banco de dados, permitindo fácil acesso e manipulação de dados no banco.
+- **Estilização Responsiva**: **TailwindCSS** é utilizado para a criação de interfaces modernas e responsivas.
+- **Componentes de UI**: **shadcn/ui** proporciona uma interface de usuário interativa e visualmente agradável, com componentes reutilizáveis e de fácil integração.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Instalação
 
-## Learn More
+1. Clone este repositório:
+    ```bash
+    git clone https://github.com/lazaroalvesr/NextAuthMasterClass.git
+    ```
 
-To learn more about Next.js, take a look at the following resources:
+2. Navegue até o diretório do projeto:
+    ```bash
+    cd NextAuthMasterClass
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. Instale as dependências:
+    ```bash
+    npm install
+    ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+4. Configure as credenciais para os provedores de autenticação no arquivo `.env.local`:
+    - **Google**: Para autenticação via Google, você precisa de um **Client ID** e **Client Secret** da Google Cloud Console.
+    - **GitHub**: Para autenticação via GitHub, você precisa de um **Client ID** e **Client Secret** do GitHub Developer Settings.
+    - **Resend**: Configure a API Key do **Resend** para envio de emails.
 
-## Deploy on Vercel
+    ```plaintext
+    NEXTAUTH_URL=http://localhost:3000
+    NEXTAUTH_SECRET=<gerar_uma_senha_secreta>
+    
+    GOOGLE_CLIENT_ID=<seu_google_client_id>
+    GOOGLE_CLIENT_SECRET=<seu_google_client_secret>
+    
+    GITHUB_CLIENT_ID=<seu_github_client_id>
+    GITHUB_CLIENT_SECRET=<seu_github_client_secret>
+    
+    RESEND_API_KEY=<sua_api_key_do_resend>
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+5. Execute o projeto:
+    ```bash
+    npm run dev
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+6. Acesse a aplicação no navegador em `http://localhost:3000`.
+
+## Como Usar
+
+1. Acesse a página de login da aplicação.
+2. Clique no botão de autenticação para fazer login com **Google** ou **GitHub**.
+3. Após a autenticação, você será redirecionado para a página principal da aplicação ou uma página protegida.
+4. Utilize o envio de email e as notificações como parte do fluxo de interação com o usuário.
+
+Este projeto está licenciado sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+## *✍️ *Autor**
+- [@lazaroalvesr](https://github.com/lazaroalvesr)
+
+## 🔗 Links
+
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://www.lazaroalvesr.com/)
+
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/l%C3%A1zaro-alves-r/)
+
+
